@@ -8,6 +8,6 @@
 
 # BASE MODE 
 - [x] Toggle picture with discription of picture
-- [] add like button to picture 
-    - [] user should see how many likes (hard mode)
+- [x] add like button to picture 
+    - [x] user should see how many likes (hard mode)
 - [] Publish on Heroku
