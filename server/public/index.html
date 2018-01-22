@@ -24,7 +24,8 @@
                             <p>{{image.text_title}}</p>
                             <p> {{image.image_description}}</p>
                             <button ng-click="vm.likeCount(image)">Like</button>
-                            {{image.like_clicks}}
+                            <p ng-mouseover="vm.viewCounter(image)">Views: {{image.views}}</p>
+                            <p>Likes: {{image.like_clicks}} Views: {{image.views}}</p>
                         </div>
                 </div>
             </div>
