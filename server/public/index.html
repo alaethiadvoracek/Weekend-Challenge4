@@ -11,119 +11,24 @@
     <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body ng-app="lifeGallery">
+    <div ng-controller="GalleryController as vm">
         <h1>Gallery of My Life</h1>
         <div class="row">
         <div class="col-sm-11" id="top"></div>
-        <div id="f1_container">
-            <div id="f1_card" class="shadow">
-                <div class="front face">
-                    <img src="assets/mom.jpg"/>
-                </div>
-                <div class="back face center">
-                    <p>My Mother and I when I was younger.</p>
-                    <p>My Mother has always been one of my biggest supporters and is part of the reason why I am who I am today.</p>
-                    <button ng-click="count = count + 1" ng-init="count=0">Like</button>
-                    {{count}}
-                </div>
-            </div>
-        </div> 
-        <div id="f1_container">
-            <div id="f1_card" class="shadow">
-                <div class="front face">
-                    <img src="assets/dad.jpg"/>
-                </div>
-                <div class="back face center">
-                    <p>My father and I at my senior Prom.</p>
-                    <p>My father has always been a big supporter in my life and pushes me to be a better version of myself. He introduced me to IT.</p>
-                    <button ng-click="count = count + 1" ng-init="count=0">Like</button>
-                {{count}}
-                </div>
-            </div>
-        </div> 
-            <div id="f1_container">
+            <div id="f1_container" ng-repeat="image in vm.assets_imageArray">
                 <div id="f1_card" class="shadow">
                     <div class="front face">
-                        <img src="assets/Family Christmas .jpg"/>
+                        <img ng-src="{{image.path}}" />
                     </div>
-                    <div class="back face center">
-                        <p>My siblings and I.</p>
-                        <p>Family is one of the most important things to me.</p>
-                        <button ng-click="count = count + 1" ng-init="count=0">Like</button>
-                    {{count}}
-                    </div>
+                        <div class="back face center">
+                            <p>{{image.text_title}}</p>
+                            <p> {{image.image_description}}</p>
+                            <button ng-click="vm.likeCount(image)">Like</button>
+                            {{image.like_clicks}}
+                        </div>
                 </div>
             </div>
         </div>
-        <div class="row">
-                <div class="col-sm-11" id="middle"></div>
-                <div id="f1_container">
-                    <div id="f1_card" class="shadow">
-                        <div class="front face">
-                            <img src="assets/fiance.jpg"/>
-                        </div>
-                        <div class="back face center">
-                            <p>Tyler and I on our first Date.</p>
-                            <p>Tyler has been one of my biggest supporters for 2 1/2 years and continues to help me become the person I want to be.</p>
-                            <button ng-click="count = count + 1" ng-init="count=0">Like</button>
-                        {{count}}
-                        </div>
-                    </div>
-                </div>
-                <div id="f1_container">
-                        <div id="f1_card" class="shadow">
-                            <div class="front face">
-                                <img src="assets/ACEN:Tyler.jpg"/>
-                            </div>
-                            <div class="back face center">
-                                <p>Tyler and I at Anime Central in Chicago.</p>
-                                <p>Cosplaying is one of my favorite hobbies and my favorite activity to do with Tyler.</p>
-                                <button ng-click="count = count + 1" ng-init="count=0">Like</button>
-                            {{count}}
-                            </div>
-                        </div>
-                    </div> 
-                    </div>
-                    <div class="row">
-                        <div class="col-sm-11" id="bottom"></div>
-                    <div id="f1_container">
-                            <div id="f1_card" class="shadow">
-                                <div class="front face">
-                                    <img src="assets/nana.jpg"/>
-                                </div>
-                                <div class="back face center">
-                                    <p>My grandma and I in California.</p>
-                                    <p>My grandma is someone who has been a part of my life since I was young and I look up to her for adivce in many areas of life.</p>
-                                    <button ng-click="count = count + 1" ng-init="count=0">Like</button>
-                                {{count}}
-                                </div>
-                            </div>
-                        </div> 
-                        <div id="f1_container">
-                                <div id="f1_card" class="shadow">
-                                    <div class="front face">
-                                        <img src="assets/papa.jpg"/>
-                                    </div>
-                                    <div class="back face center">
-                                        <p>My grandpa and I when I was just a young squirt.</p>
-                                        <p>My grandpa was a great role model when it came to work and providing for a family.</p>
-                                        <button ng-click="count = count + 1" ng-init="count=0">Like</button>
-                                    {{count}}
-                                    </div>
-                                </div>
-                            </div> 
-                            <div id="f1_container">
-                                    <div id="f1_card" class="shadow">
-                                        <div class="front face">
-                                            <img src="assets/Sabaton Concert.jpg"/>
-                                        </div>
-                                        <div class="back face center">
-                                            <p>Meet and Greet with one of my favorite bands.</p>
-                                            <p>Music is a big part of my life and I love going to concerts.</p>
-                                            <button ng-click="count = count + 1" ng-init="count=0">Like</button>
-                                        {{count}}
-                                        </div>
-                                    </div>
-                                </div> 
-                                </div>                          
+    </div>
 </body>
 </html>
