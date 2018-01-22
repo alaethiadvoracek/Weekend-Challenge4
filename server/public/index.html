@@ -7,25 +7,26 @@
     <script src="vendors/angular.min.js"></script>
     <script src="scripts/client.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Macondo" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Bad+Script|Fjalla+One|Macondo" rel="stylesheet">
     <link rel="stylesheet" href="styles/styles.css">
 </head>
-<body ng-app="lifeGallery">
+<body ng-app="lifeGallery" class ="container">
     <div ng-controller="GalleryController as vm">
         <h1>Gallery of My Life</h1>
+        <p id="phrase">There are many aspects of life. These illistrate important aspects in my life. Mouse Over to learn why!</p>
         <div class="row">
-        <div class="col-sm-11" id="top"></div>
+        <div class="col-sm-13"></div>
             <div id="f1_container" ng-repeat="image in vm.assets_imageArray">
                 <div id="f1_card" class="shadow">
                     <div class="front face">
                         <img ng-src="{{image.path}}" />
                     </div>
                         <div class="back face center">
-                            <p>{{image.text_title}}</p>
-                            <p> {{image.image_description}}</p>
+                            <p id="title">{{image.text_title}}</p>
+                            <p id="desc"> {{image.image_description}}</p>
                             <button ng-click="vm.likeCount(image)">Like</button>
                             <p ng-mouseover="vm.viewCounter(image)">Views: {{image.views}}</p>
-                            <p>Likes: {{image.like_clicks}} Views: {{image.views}}</p>
+                            <p>Likes: {{image.like_clicks}}</p>
                         </div>
                 </div>
             </div>
