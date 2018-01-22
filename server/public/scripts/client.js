@@ -50,7 +50,7 @@ lifeGallery.controller('GalleryController', ['$http', function($http) {
         like_clicks: 0,
         path: "assets/nana.jpg", 
         text_title: "My grandma and I in California",
-        image_description: "My grandpa was a great role model when it came to work and providing for a family."
+        image_description: "My grandma is someone who has been a part of my life since I was young and I look up to her for adivce in many areas of life."
     }
 
     let image7 = {
@@ -58,7 +58,7 @@ lifeGallery.controller('GalleryController', ['$http', function($http) {
         like_clicks: 0,
         path: "assets/papa.jpg", 
         text_title: "My grandpa and I when I was just a young squirt.",
-        image_description: "My grandma is someone who has been a part of my life since I was young and I look up to her for adivce in many areas of life."
+        image_description: "My grandpa was a great role model when it came to work and providing for a family."
     }
 
     let image8 = {
