@@ -48,7 +48,7 @@ lifeGallery.controller('GalleryController', ['$http', function($http) {
     let image6 = {
         id: 6, 
         like_clicks: 0,
-        path: "assets/papa.jpg", 
+        path: "assets/nana.jpg", 
         text_title: "My grandma and I in California",
         image_description: "My grandpa was a great role model when it came to work and providing for a family."
     }
