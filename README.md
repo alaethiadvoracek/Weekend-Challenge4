@@ -1,17 +1,21 @@
-##WEEKEND CHALLENGE 
+## Gallery Of My Life 
 
-# Set-up
+## Getting Started
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
-- [x] Set up file structure
-- [x] Bring in angular 
-- [x] bring in images 
+### Prerequisites
+- You will need to download ```node.js``` if it is not already installed on your machine.  
+- clone or download the project on your machine and open terminal. 
+- run ```npm install --save``` to get all required files for the project. 
+- run ```npm start``` and navigate to localhost:5000 in your browser 
 
-# BASE MODE 
-- [x] Toggle picture with discription of picture
-- [x] add like button to picture 
-    - [x] user should see how many likes 
-- [x] Publish on Heroku
+## Built With 
+- Express 
+- Node.js 
+- Angular Material 
+- Javascript 
+- HTML 
+- CSS
 
-## HARD MODE 
-- [x] add view counter to see how many times a photo has been viewed
-- [x] bootstrap and styling 
+## Authors 
+Alaethia Dvoracek 
